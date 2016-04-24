@@ -60,7 +60,7 @@
     * Bisecting
       * Cut the problem in half, and then again until you zero in on the exact problem
       * Sometimes slower than guessing where the bug is, but it will give you better, faster results on average
-  * Chrome Developer Tools
+  * [Chrome Developer Tools](https://developer.chrome.com/devtools/docs/javascript-debugging)
     * Open with Cmd-Opt-I
     * Search all sources with Cmd-Opt-F
     * Console
