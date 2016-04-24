@@ -9,12 +9,11 @@
     * Linters help minimize syntax bugs
   * Programming Bugs
     * The code runs, but it doesn’t do what you want
-    * TDD/BDD helps minimize programming bugs
+    * TDD/BDD helps minimize programming bugs ([here's an alternate view on writing software test-first](http://david.heinemeierhansson.com/2014/tdd-is-dead-long-live-testing.html))
   * Requirements
     * The code does what the developer wants, but not what the user wants
-    * Lean/Agile approaches help minimize miscommunication
+    * Lean/Agile approaches help minimize miscommunication (fast feedback)
 * Thinking About Bugs
-  * A bug or a colony?
   * When do you find bugs?
     * When you're planning the code
     * As you're writing the code
@@ -26,6 +25,11 @@
     * Then, reproduce the error reliably
     * Then, clearly define the code path(s) causing the problem
     * Finally, repair the problem and compare before/after
+    * Iterate as needed
+  * A bug or a colony?
+    * Real bugs often involve multiple errors
+    * Solving one bug sometimes reveals a different bug that was being hidden
+    * Example: A JavaScript/jQuery bug prevents different billing address from being submitted; repairing that bug reveals a different bug in the API when the billing address is submitted.
   * Clarify & Verify Assumptions
     * You have to make some assumptions in order to get started
     * Bring them into awareness and question them
