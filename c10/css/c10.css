@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
-html { 
-  background: url(../img/paint-backdrop.jpg) no-repeat center center fixed; 
+html {
+  background: url(../img/paint-backdrop.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -62,7 +62,7 @@ input {
 
 #width, #height {
 	background-repeat: no-repeat;
-    background-position: 10px center; 
+    background-position: 10px center;
     padding-left: 40px;}
 
 #width {background-image: url('../img/paint-width.png');}
@@ -83,6 +83,10 @@ p {
 	text-align: center;
 	color: #14b9d6;
 	font-weight: bold;}
+p.error {
+  color: #600;
+  font-size: 1em;
+}
 
 #contact p, #page p {
 	font-size: 100%;}

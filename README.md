@@ -5,10 +5,11 @@
   * Writing code IS debugging; the question is how early in the process you do it
 * Types of Bugs
   * Syntax Bugs
-    * The code doesn’t run (missing brackets, misspellings, etc.)
+    * The code doesn't run (missing brackets, misspellings, etc.)
     * Linters help minimize syntax bugs
   * Programming Bugs
-    * The code runs, but it doesn’t do what you want
+    * The code runs, but it doesn't do what you want
+    * Happy path bugs (fundamental logic flaw) vs. Edge cases/Exception handling
     * TDD/BDD helps minimize programming bugs ([here's an alternate view on writing software test-first](http://david.heinemeierhansson.com/2014/tdd-is-dead-long-live-testing.html))
   * Requirements
     * The code does what the developer wants, but not what the user wants
@@ -34,6 +35,13 @@
     * You have to make some assumptions in order to get started
     * Bring them into awareness and question them
     * What are some examples of assumptions?
+  * Pitfalls
+    * Distraction
+      * If you find a colony of bugs, stay focused unless a secondary bug is blocking progress
+    * Not reproducing a bug before "repairing" it
+      * If you can't reproduce the bug accurately, you won't know if you've repaired it
+      * Be mindful of differences in code version or environment
+    * Estimating the time required to repair a bug is especially difficult
 * Communicating About Bugs
   * Learn how to translate what the user reports into a useful document
     * [The website is down](http://www.thewebsiteisdown.com/)
@@ -44,9 +52,14 @@
     * Exact steps taken (described so that developer can replicate the process; include inputs)
     * What user expected vs. what user got
 * Tools for Debugging JavaScript
-  * Generic Debugging Toolbox
-    * Visibility into the code (logs, debugger)
+  * Generic Debugging Toolbox (applicable to all programming languages)
+    * Mental library of common bugs (this grows with time & practice)
+    * [Rubber ducking](http://www.rubberduckdebugging.com/)
+    * Code reviews
+    * Visibility into the code execution (logs, debugger)
     * Bisecting
+      * Cut the problem in half, and then again until you zero in on the exact problem
+      * Sometimes slower than guessing where the bug is, but it will give you better, faster results on average
   * Chrome Developer Tools
     * Open with Cmd-Opt-I
     * Search all sources with Cmd-Opt-F
@@ -63,6 +76,5 @@
       * Continue
       * Conditional breakpoint
     * The Call Stack
-    * Debugging Event Handlers
 
 Code samples are adapted from *[JavaScript & jQuery](http://javascriptbook.com/)* by Jon Duckett, available from [Powell's](http://www.powells.com/book/javascript-jquery-interactive-front-end-development-9781118531648/62-0), [Amazon](http://smile.amazon.com/JavaScript-JQuery-Interactive-Front-End-Development/dp/1118531647/ref=sr_1_1?ie=UTF8&qid=1461518301&sr=8-1&keywords=javascript+and+jquery+duckett), [etc.](https://www.google.com/?gws_rd=ssl#q=javascript+and+jquery+jon+duckett)
